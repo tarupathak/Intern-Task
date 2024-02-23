@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Intern Task</title>
+  </head>
+  <body>
+    <h1>Select a doctor</h1>
+    <div class="user-container" id="userContainer"></div>
+    <script>
+      var usersData = [
+        {
+          image: "./assets/doctor.jpg",
+          name: "John Doe",
+          doctor: "Cardiologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Jane Smith",
+          doctor: "Dermatologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Michael Johnson",
+          doctor: "Neurologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Emily Brown",
+          doctor: "Pediatrician",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "David Lee",
+          doctor: "Oncologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Sarah Wilson",
+          doctor: "Gynecologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Chris Anderson",
+          doctor: "Psychiatrist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Jennifer Taylor",
+          doctor: "ENT Specialist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Matthew Martinez",
+          doctor: "Orthopedic Surgeon",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Amanda Harris",
+          doctor: "Endocrinologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Ryan Moore",
+          doctor: "Urologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Nicole Clark",
+          doctor: "Ophthalmologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Kevin Scott",
+          doctor: "Allergist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Laura Turner",
+          doctor: "Pulmonologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Daniel White",
+          doctor: "Rheumatologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Megan Green",
+          doctor: "Hematologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Justin Allen",
+          doctor: "Gastroenterologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Stephanie Carter",
+          doctor: "Dentist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Brandon King",
+          doctor: "Plastic Surgeon",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Melissa Rodriguez",
+          doctor: "Nephrologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Joshua Martinez",
+          doctor: "Radiologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Christina Adams",
+          doctor: "Nutritionist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Tyler Hernandez",
+          doctor: "Anesthesiologist",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Rachel Nguyen",
+          doctor: "Dietitian",
+        },
+        {
+          image: "./assets/doctor.jpg",
+          name: "Patrick Evans",
+          doctor: "Podiatrist",
+        },
+      ];
+
+      var userContainer = document.getElementById("userContainer");
+
+      function loadUsers(data) {
+        data.forEach(function (user) {
+          var userCard = document.createElement("div");
+          userCard.className = "user-card";
+
+          var img = new Image();
+          img.src = user.image;
+
+          var nameElement = document.createElement("p");
+          nameElement.textContent = user.name;
+
+          var doctorElement = document.createElement("p");
+          doctorElement.textContent = user.doctor;
+
+          userCard.appendChild(img);
+          userCard.appendChild(nameElement);
+          userCard.appendChild(doctorElement);
+
+          userContainer.appendChild(userCard);
+        });
+      }
+
+      window.onload = function () {
+        loadUsers(usersData);
+      };
+    </script>
+  </body>
+</html>
